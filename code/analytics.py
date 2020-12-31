@@ -1,3 +1,5 @@
+import csv
+
 def load_data(file_name):
     with open(file_name) as csv_file:
         land_data = dict()
