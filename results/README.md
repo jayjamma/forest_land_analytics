@@ -24,6 +24,7 @@ Here we see a contrast. The Brazil forest area is reducing steadily from the yea
 
 **3. We finally look at different countries where change in forest land is significant.**
 We have removed countries where rate of change is marginal below 0.15% and also removed many countries whose overall land area is below 50000 sq.kms. You can change these limitations in the code “forest_change_country_wise.py” to accommodate more or less countries in the plot. Below is the graph of the 28 prominent countries:
+
 ![Top countries of the world with significant forest area change.](change_of_forests_of_countries.png?raw=true "Top countries of the world with significant forest area change.")
 The graph shows that these countries have the maximum rate of change in their forest area.
 
