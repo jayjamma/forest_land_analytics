@@ -1,7 +1,8 @@
 import csv
 import matplotlib.pyplot as plt
 import numpy as np
-import analytics.py
+from analytics import load_data
+from analytics import extract_series
 
 country_code = input("Enter Country Code:")
 
@@ -16,6 +17,5 @@ m, c = np.polyfit(np.array(agri_list),np.array(forest_list), 1)
 print("Agri vs Forest:",m)
 m, c = np.polyfit(np.array(forest_list), np.array(years),1)
 print("Forest Trend:",m)
-
 plt.scatter(agri_list, forest_list)
 plt.show()
