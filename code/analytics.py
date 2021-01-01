@@ -35,5 +35,4 @@ def country_stats(country_code,forest_data,agri_data):
     trend, c = np.polyfit(np.array(forest_list),np.array(years), 1)
     m, c = np.polyfit(np.array(forest_list), np.array(years),1)
     covariance, c = np.polyfit(np.array(agri_list),np.array(forest_list), 1)
-   #print(trend,covariance)
     return trend,covariance
