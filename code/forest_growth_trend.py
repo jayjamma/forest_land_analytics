@@ -13,7 +13,7 @@ def forest_trendline(country_code, forest_data):
 	plt.plot(years,p(years),"y--")
 
 country_code = input("Enter Country Code:")
-forest_data = load_data('forest area.csv')
+forest_data = load_data('../data/forest area.csv')
 forest_trendline(country_code, forest_data)
 
 plt.show()
