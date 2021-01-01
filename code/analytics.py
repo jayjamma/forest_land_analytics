@@ -1,4 +1,5 @@
 import csv
+import numpy as np
 
 def load_data(file_name):
     with open(file_name) as csv_file:
@@ -28,11 +29,11 @@ def extract_series(country_code,data):
         years.append(float(year))
     return series,years
 
-def country_stats(country_code):
-    global forest_list
-    global agri_list
+def country_stats(country_code,forest_data,agri_data):
     forest_list, years = extract_series(country_code, forest_data)
     agri_list, x = extract_series(country_code, agri_data)
     trend, c = np.polyfit(np.array(forest_list),np.array(years), 1)
+    m, c = np.polyfit(np.array(forest_list), np.array(years),1)
     covariance, c = np.polyfit(np.array(agri_list),np.array(forest_list), 1)
+   #print(trend,covariance)
     return trend,covariance
